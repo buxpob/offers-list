@@ -1,0 +1,249 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid $card-border-color;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 555px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1106px;
+    flex-direction: row;
+    padding-bottom: 0;
+    margin-bottom: 60px;
+  }
+}
+
+.card__picture {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+
+  @media (min-width: $desktop-width) {
+    min-width: 473px;
+    min-height: 369px;
+  }
+}
+
+.card__picture--special {
+  min-height: 286px;
+}
+
+.card__stock {
+  position: absolute;
+  top: 41px;
+  padding: 9px 17px 17px 17px;
+  min-width: 99px;
+  max-width: 100%;
+  height: 35px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: $stock-bg-color;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  @media (min-width: $desktop-width) {
+    top: 61px;
+    min-width: 150px;
+    max-width: 472px;
+    height: 41px;
+    font-size: 16px;
+    padding: 9px 33px 17px 32px;
+  }
+}
+
+.card__stock--special {
+  position: absolute;
+  top: 0;
+  padding: 12px 26px;
+  font-weight: 600;
+  font-size: 14px;
+  color: $white;
+  background-color: $stock-special-bg-color;
+  border-bottom-right-radius: 15px;
+  min-width: 130px;
+  height: 43px;
+
+  @media (min-width: $desktop-width) {
+    background-color: $stock-bg-color;
+  }
+}
+
+.card__stock--unique {
+  background-color: $stock-unique-bg-color;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+    top: 48px;
+    min-width: 155px;
+    padding-top: 11px;
+    padding-left: 35px;
+  }
+}
+
+.card__info-description {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 0px;
+  }
+}
+
+.card__info-time {
+  position: relative;
+  padding-left: 36px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: $card-info-time-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 11px;
+    background-image: url('../../img/clock.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
+    padding-left: 43px;
+    font-size: 14px;
+
+    &::after {
+      top: 1px;
+      left: 20px;
+    }
+  }
+}
+
+.card__info-text {
+  line-height: 22px;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-top: 11px;
+  font-weight: 600;
+  color: $description-text-color;
+
+  @media (min-width: $desktop-width) {
+    line-height: 34px;
+    font-size: 26px;
+    padding: 6px 10px 6px 25px;
+    font-weight: 400;
+  }
+}
+
+.card__terms {
+  padding-left: 48px;
+  margin-right: 10px;
+  margin-top: 14px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 50px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 50px;
+    margin-top: 9px;
+  }
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  padding-right: 20px;
+  padding-left: 18px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+    margin-top: 12px;
+    margin-left: 3px;
+    justify-content: flex-start;
+  }
+}
+
+.card__price {
+  font-size: 30px;
+  margin-bottom: 5px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
+    margin-right: 20px;
+    min-width: 125px;
+  }
+}
+
+.card__sum {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.card__sum-details {
+  line-height: 11px;
+  padding-top: 5px;
+  font-size: 10px;
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+    }
+  }
+
+  &--mobil {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+.card__button {
+  padding: 13px 14px 12px 11px;
+  width: 165px;
+  align-self: flex-start;
+  border-radius: 20px;
+  background-color: $yellow;
+  border: 1px solid $yellow-dark;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    width: 187px;
+    padding: 14px 35px 14px 25px;
+    border-radius: 23px;
+  }
+}
+
+.card__button--special {
+  border-radius: 10px;
+  min-width: 193px;
+  font-weight: 600;
+  padding-left: 15px;
+}

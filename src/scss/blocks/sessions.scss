@@ -1,0 +1,68 @@
+.sessions {
+  display: inline;
+  list-style: none;
+  padding-top: 10px;
+  margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+    padding: 10px 0 10px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.sessions__item {
+  display: inline-block;
+  background-color: $term-sessions-item-bg-color;
+  color: $term-sessions-item-time-color;
+  max-width: 63px;
+  padding: 2px 14px 2px 13px;
+  border-radius: 11px;
+  margin-right: 2px;
+  margin-bottom: 7px;
+  cursor: pointer;
+
+  &--active {
+    background-color: #6BA6FF;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 73px;
+    padding: 4px 15px 4px 15px;
+    margin-top: 10px;
+    margin-right: 4px;
+    font-size: 16px;
+  }
+}
+
+.sessions__text {
+  @media (min-width: $tablet-width) {
+    flex-shrink: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-start;
+  }
+}
+
+.sessions__button {
+  display: none;
+  border: none;
+  padding: 4px 14px 4px 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 14px 4px 13px;
+
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 6px 16px 7px 15px;
+    margin: 0;
+  }
+}

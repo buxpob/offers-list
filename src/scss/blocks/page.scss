@@ -1,0 +1,26 @@
+.page {
+  height: 100%;
+  font-style: normal;
+  font-family: $default-font;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  color: $black;
+}
+
+.page__body {
+  position: relative;
+  min-width: 375px;
+  max-width: 1106px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.page__main {
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+}

@@ -1,0 +1,51 @@
+.terms__item {
+  position: relative;
+  padding: 4px 10px 9px 0px;
+  color: $terms-text-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -35px;
+    background-image: url('../../img/mark.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &--sessions {
+    margin-top: 5px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+
+    &::after {
+      left: -40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    padding-left: 2px;
+    padding-bottom: 11px;
+
+    &::after {
+      top: 7px;
+      left: -30px;
+    }
+  }
+}

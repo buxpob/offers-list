@@ -1,0 +1,9 @@
+.main {
+  min-width: 375px;
+  min-height: 100%;
+  padding: 25px 17px 25px;
+
+  @media (min-width: $desktop-width) {
+    padding: 65px 20px 65px 50px;
+  }
+}
